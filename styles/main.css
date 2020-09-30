@@ -1,13 +1,44 @@
 @charset "UTF-8";
+/*==========
+  variables
+  ==========*/
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap);
+/*==========
+  colors
+  ==========
+*/
+/*==========
+  typography
+  ==========
+*/
+/*==========
+  components: card
+  ==========*/
+/*==========
+  breakpoints
+  ==========*/
+/*==========
+  base
+  ==========*/
+/*==========
+  reset
+  ==========*/
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*==========
+  Base
+  ==========*/
 body {
   height: 3300px;
   min-height: 100vh;
@@ -16,15 +47,24 @@ body {
   min-width: 100%;
   position: relative;
   font-family: "Inter", sans-serif;
-  /*  background-color: #485461;
-  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%); */
   background-color: #272727;
   /*  background-color: rgba(214, 202, 200, 0.568); */
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+.scroll {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+.scroll-content {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  max-width: 3300px;
 }
 
 @media (max-width: 768px) {
@@ -37,6 +77,12 @@ a {
     max-width: 3000px;
   }
 }
+/*=========
+  text
+  ==========*/
+/*==========
+  effects
+  ==========*/
 .fake-loading {
   position: fixed;
   z-index: 10;
@@ -63,12 +109,8 @@ a {
   100% {
     -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
     transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-    display: block;
-    /*  height: 200vh; */
-    /* top: 0; */
     z-index: -1;
     opacity: 0;
-    display: none;
   }
 }
 .loading-bar-wrapper {
@@ -212,6 +254,9 @@ a {
     font-size: 6rem;
   }
 }
+/*==========
+  UI components
+  ==========*/
 .article-1 {
   /* position: absolute;
     top: 0px;
@@ -495,16 +540,7 @@ a {
 /* <a href="https://icons8.com/icon/Vra58PN2KmI5/react">React icon by Icons8</a> */
 /* <a href="https://icons8.com/icon/NfbyHexzVEDk/react">React icon by Icons8</a> */
 /* <a target="_blank" href="https://icons8.com/icons/set/compare-git">Compare Git icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */
-/* ++++++++++++++++++ SECTION 2 +++++++++++++++++++++++*/
-/* Cards wrapper */
 .card-wrapper {
-  /*   height: 100vh;
-  display: flex;
-
-  flex-wrap: wrap;
-  justify-content: center;
-
-  align-content: flex-start; */
   display: grid;
   max-width: 1200px;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -512,7 +548,8 @@ a {
   padding: 1rem 0rem;
 }
 
-.blog-card {
+.card-1 {
+  background: url(../images/library.jpg) center/cover no-repeat;
   white-space: initial;
   width: 294.11px;
   height: 205.88px;
@@ -523,50 +560,23 @@ a {
   box-shadow: 3px 3px 20px rgba(7, 8, 17, 0.5);
   text-align: center;
 }
-.blog-card.spring-fever {
-  background: url(../images/library.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.blog-card.spring-fever h3 {
+.card-1 h3 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #9cc9e3;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 0;
   text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px;
 }
-.blog-card.spring-fever2 {
-  background: url(../images/navbar-icon-darkmode.png) no-repeat;
-  background-size: contain;
-  background-position: center;
+.card-1 hr {
+  width: 50px;
+  height: 3px;
+  margin: 10px auto;
+  border: 0;
+  background: #d0bb57;
 }
-.blog-card.spring-fever2 h3 {
-  text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px;
-}
-.blog-card.spring-fever3 {
-  background: url(../images/plants/kaufmann-mercantile-a7Woj8W6J0s-unsplash.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.blog-card.spring-fever4 {
-  background: url(../images/red-megaphone.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.blog-card.spring-fever5 {
-  background: url(../images/agenda-yellow.jpg) no-repeat;
-  background-size: cover;
-  background-position: center bottom;
-}
-.blog-card.spring-fever5 h3 {
-  text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px;
-}
-.blog-card.spring-fever6 {
-  background: url(../images/event-orgarnizer.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.blog-card.spring-fever6 h3 {
-  text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px;
-}
-.blog-card .color-overlay {
-  /* Rectangle 11: */
+.card-1 .color-overlay {
   background: rgba(84, 104, 110, 0.4);
   width: 294.11px;
   height: 205.88px;
@@ -576,21 +586,7 @@ a {
   left: 0;
   transition: background 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 }
-.blog-card:hover .card-info {
-  opacity: 1;
-  bottom: 50px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  color: #9cc9e3;
-}
-.blog-card:hover .color-overlay {
-  background: rgba(84, 104, 110, 0.8);
-}
-.blog-card:hover .title-content {
-  opacity: 0;
-}
-
-.title-content {
+.card-1 .title-content {
   text-align: center;
   margin: 30px 0 0 0;
   position: absolute;
@@ -599,22 +595,323 @@ a {
   top: 0;
   left: 0;
 }
+.card-1:hover .card-info {
+  opacity: 1;
+  bottom: 50px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #9cc9e3;
+}
+.card-1:hover .color-overlay {
+  background: rgba(84, 104, 110, 0.8);
+}
+.card-1:hover .title-content {
+  opacity: 0;
+}
 
-h3 {
+.card-2 {
+  background: url(../images/navbar-icon-darkmode.png) center/cover no-repeat;
+  white-space: initial;
+  width: 294.11px;
+  height: 205.88px;
+  position: relative;
+  margin: 1rem 1rem;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px rgba(7, 8, 17, 0.5);
+  text-align: center;
+}
+.card-2 h3 {
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 1px;
   color: #9cc9e3;
   font-family: "Inter", sans-serif;
   margin-bottom: 0;
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px;
 }
-
-hr {
+.card-2 hr {
   width: 50px;
   height: 3px;
   margin: 10px auto;
   border: 0;
   background: #d0bb57;
+}
+.card-2 .color-overlay {
+  background: rgba(84, 104, 110, 0.4);
+  width: 294.11px;
+  height: 205.88px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transition: background 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+.card-2 .title-content {
+  text-align: center;
+  margin: 30px 0 0 0;
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.card-2:hover .card-info {
+  opacity: 1;
+  bottom: 50px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #9cc9e3;
+}
+.card-2:hover .color-overlay {
+  background: rgba(84, 104, 110, 0.8);
+}
+.card-2:hover .title-content {
+  opacity: 0;
+}
+
+.card-3 {
+  background: url(../images/plants/kaufmann-mercantile-a7Woj8W6J0s-unsplash.jpg) center/cover no-repeat;
+  white-space: initial;
+  width: 294.11px;
+  height: 205.88px;
+  position: relative;
+  margin: 1rem 1rem;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px rgba(7, 8, 17, 0.5);
+  text-align: center;
+}
+.card-3 h3 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #9cc9e3;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 0;
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px;
+}
+.card-3 hr {
+  width: 50px;
+  height: 3px;
+  margin: 10px auto;
+  border: 0;
+  background: #d0bb57;
+}
+.card-3 .color-overlay {
+  background: rgba(84, 104, 110, 0.4);
+  width: 294.11px;
+  height: 205.88px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transition: background 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+.card-3 .title-content {
+  text-align: center;
+  margin: 30px 0 0 0;
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.card-3:hover .card-info {
+  opacity: 1;
+  bottom: 50px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #9cc9e3;
+}
+.card-3:hover .color-overlay {
+  background: rgba(84, 104, 110, 0.8);
+}
+.card-3:hover .title-content {
+  opacity: 0;
+}
+
+.card-4 {
+  background: url(../images/red-megaphone.jpg) center/cover no-repeat;
+  white-space: initial;
+  width: 294.11px;
+  height: 205.88px;
+  position: relative;
+  margin: 1rem 1rem;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px rgba(7, 8, 17, 0.5);
+  text-align: center;
+}
+.card-4 h3 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #9cc9e3;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 0;
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px;
+}
+.card-4 hr {
+  width: 50px;
+  height: 3px;
+  margin: 10px auto;
+  border: 0;
+  background: #d0bb57;
+}
+.card-4 .color-overlay {
+  background: rgba(84, 104, 110, 0.4);
+  width: 294.11px;
+  height: 205.88px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transition: background 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+.card-4 .title-content {
+  text-align: center;
+  margin: 30px 0 0 0;
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.card-4:hover .card-info {
+  opacity: 1;
+  bottom: 50px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #9cc9e3;
+}
+.card-4:hover .color-overlay {
+  background: rgba(84, 104, 110, 0.8);
+}
+.card-4:hover .title-content {
+  opacity: 0;
+}
+
+.card-5 {
+  background: url(../images/agenda-yellow.jpg) center/cover no-repeat;
+  white-space: initial;
+  width: 294.11px;
+  height: 205.88px;
+  position: relative;
+  margin: 1rem 1rem;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px rgba(7, 8, 17, 0.5);
+  text-align: center;
+}
+.card-5 h3 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #9cc9e3;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 0;
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px;
+}
+.card-5 hr {
+  width: 50px;
+  height: 3px;
+  margin: 10px auto;
+  border: 0;
+  background: #d0bb57;
+}
+.card-5 .color-overlay {
+  background: rgba(84, 104, 110, 0.4);
+  width: 294.11px;
+  height: 205.88px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transition: background 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+.card-5 .title-content {
+  text-align: center;
+  margin: 30px 0 0 0;
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.card-5:hover .card-info {
+  opacity: 1;
+  bottom: 50px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #9cc9e3;
+}
+.card-5:hover .color-overlay {
+  background: rgba(84, 104, 110, 0.8);
+}
+.card-5:hover .title-content {
+  opacity: 0;
+}
+
+.card-6 {
+  background: url(../images/event-orgarnizer.jpg) center/cover no-repeat;
+  white-space: initial;
+  width: 294.11px;
+  height: 205.88px;
+  position: relative;
+  margin: 1rem 1rem;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px rgba(7, 8, 17, 0.5);
+  text-align: center;
+}
+.card-6 h3 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #9cc9e3;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 0;
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px;
+}
+.card-6 hr {
+  width: 50px;
+  height: 3px;
+  margin: 10px auto;
+  border: 0;
+  background: #d0bb57;
+}
+.card-6 .color-overlay {
+  background: rgba(84, 104, 110, 0.4);
+  width: 294.11px;
+  height: 205.88px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transition: background 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+.card-6 .title-content {
+  text-align: center;
+  margin: 30px 0 0 0;
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.card-6:hover .card-info {
+  opacity: 1;
+  bottom: 50px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #9cc9e3;
+}
+.card-6:hover .color-overlay {
+  background: rgba(84, 104, 110, 0.8);
+}
+.card-6:hover .title-content {
+  opacity: 0;
 }
 
 .intro {
@@ -633,7 +930,6 @@ hr {
   bottom: 100px;
   left: 0;
   margin: 0 auto;
-  /* padding: 0 50px; */
   color: #dce3e7;
   font-family: "Droid Serif", serif;
   font-style: 16px;
@@ -700,30 +996,6 @@ hr {
 /* <span>Photo by <a href="https://unsplash.com/@jeshoots?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">JESHOOTS.COM</a> on <a href="https://unsplash.com/s/photos/calendar?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> */
 /* <span>Photo by <a href="https://unsplash.com/@hugorrocha?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Hugo Rocha</a> on <a href="https://unsplash.com/s/photos/calendar?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> */
 /* <span>Photo by <a href="https://unsplash.com/@esteejanssens?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Estée Janssens</a> on <a href="https://unsplash.com/s/photos/calendar?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> */
-.index {
-  /*   overflow-y: scroll;
-
-  height: 100%;
-  height: 100%; */
-}
-
-.scroll {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-  /* overflow: hidden; */
-}
-
-.scroll-content {
-  display: flex;
-  /* white-space: nowrap; */
-  position: relative;
-  height: 100vh;
-  max-width: 3300px;
-}
-
 @media (max-width: 768px) {
   .scroll-content {
     max-width: 2800px;

@@ -1,7 +1,33 @@
-// variables
-$card-width: 294.11px;
-$card-height: 205.88px;
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap);
+
+/*==========
+  colors
+  ==========
+*/
 $h-color: #9cc9e3;
 $yellow: #d0bb57;
-$txt-color: #dce3e7;
 $blue-icon: #3294a6;
+$dark: #272727;
+/*==========
+  typography
+  ==========
+*/
+$font-family: 'Inter', sans-serif;
+$txt-color: #dce3e7;
+
+/*==========
+  components: card
+  ==========*/
+$card-width: 294.11px;
+$card-height: 205.88px;
+
+/*==========
+  breakpoints
+  ==========*/
+$breakpoints: (
+  phone: 640px,
+  tablet: 768px,
+  desktop: 1024px,
+);

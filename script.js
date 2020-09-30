@@ -2,6 +2,10 @@ const scrollContent = document.getElementById('scroll-content');
 const arrow = document.getElementById('arrow');
 const arts = document.getElementsByClassName('art');
 const glitch = document.getElementById('glitch');
+const main = document.getElementById('main');
+
+console.log('main', main.offsetWidth, main.offsetHeight);
+console.log(main.getBoundingClientRect());
 
 window.addEventListener('scroll', (e) => {
   translate(window.pageYOffset);
@@ -9,12 +13,6 @@ window.addEventListener('scroll', (e) => {
 
 function translate(pixels) {
   scrollContent.style.transform = `translateX(${-pixels}px)`;
-  /*   if (pixels < 190) {
-    arrow.style.transform = ``;
-    arrow.style.transform = `rotate(${-pixels * 0.5}deg) scale(${
-      pixels * 0.02
-    })`;
-  } */
 }
 
 function toggleGlitch() {

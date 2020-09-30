@@ -1,29 +1,30 @@
-@import 'base', 'variables', 'typography', 'fake-loading', 'glitch', 'article-1',
-  'article-2', 'article-3', 'card';
+/*==========
+  variables
+  ==========*/
+@import 'variables';
+/*==========
+  base
+  ==========*/
+@import 'base';
 
-.index {
-  /*   overflow-y: scroll;
+/*=========
+  text
+  ==========*/
+@import 'typography';
 
-  height: 100%;
-  height: 100%; */
-}
+/*==========
+  effects
+  ==========*/
+@import 'fake-loading';
+@import 'glitch';
 
-.scroll {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-  /* overflow: hidden; */
-}
-
-.scroll-content {
-  display: flex;
-  /* white-space: nowrap; */
-  position: relative;
-  height: 100vh;
-  max-width: 3300px;
-}
+/*==========
+  UI components
+  ==========*/
+@import 'article-1';
+@import 'article-2';
+@import 'article-3';
+@import 'card';
 
 @media (max-width: 768px) {
   .scroll-content {

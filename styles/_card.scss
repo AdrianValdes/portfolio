@@ -1,22 +1,13 @@
-/* ++++++++++++++++++ SECTION 2 +++++++++++++++++++++++*/
-/* Cards wrapper */
-
 .card-wrapper {
-  //border: 2px solid gold;
-  /*   height: 100vh;
-  display: flex;
-
-  flex-wrap: wrap;
-  justify-content: center;
-
-  align-content: flex-start; */
   display: grid;
   max-width: 1200px;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 0.5rem;
   padding: 1rem 0rem;
 }
-.blog-card {
+
+@mixin card($image) {
+  background: $image center / cover no-repeat;
   white-space: initial;
   width: $card-width;
   height: $card-height;
@@ -27,52 +18,25 @@
   box-shadow: 3px 3px 20px rgba(7, 8, 17, 0.5);
   text-align: center;
 
-  &.spring-fever {
-    background: url(../images/library.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    h3 {
-      text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px;
-    }
+  h3 {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: $h-color;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 0;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px;
   }
-  &.spring-fever2 {
-    background: url(../images/navbar-icon-darkmode.png) no-repeat;
-    background-size: contain;
-    background-position: center;
 
-    h3 {
-      text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px;
-    }
+  hr {
+    width: 50px;
+    height: 3px;
+    margin: 10px auto;
+    border: 0;
+    background: $yellow;
   }
-  &.spring-fever3 {
-    background: url(../images/plants/kaufmann-mercantile-a7Woj8W6J0s-unsplash.jpg)
-      no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  &.spring-fever4 {
-    background: url(../images/red-megaphone.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  &.spring-fever5 {
-    background: url(../images/agenda-yellow.jpg) no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-    h3 {
-      text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px;
-    }
-  }
-  &.spring-fever6 {
-    background: url(../images/event-orgarnizer.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    h3 {
-      text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px;
-    }
-  }
+
   .color-overlay {
-    /* Rectangle 11: */
     background: rgba(84, 104, 110, 0.4);
     width: $card-width;
     height: $card-height;
@@ -81,6 +45,16 @@
     top: 0;
     left: 0;
     transition: background 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+  }
+
+  .title-content {
+    text-align: center;
+    margin: 30px 0 0 0;
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    top: 0;
+    left: 0;
   }
 
   &:hover {
@@ -101,35 +75,29 @@
   }
 }
 
-.title-content {
-  text-align: center;
-  margin: 30px 0 0 0;
-  position: absolute;
-  z-index: 20;
-  width: 100%;
-  top: 0;
-  left: 0;
+.card-1 {
+  @include card(url(../images/library.jpg));
 }
-
-h3 {
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  color: $h-color;
-  font-family: 'Inter', sans-serif;
-  margin-bottom: 0;
+.card-2 {
+  @include card(url(../images/navbar-icon-darkmode.png));
 }
-hr {
-  width: 50px;
-  height: 3px;
-  margin: 10px auto;
-  border: 0;
-  background: $yellow;
+.card-3 {
+  @include card(
+    url(../images/plants/kaufmann-mercantile-a7Woj8W6J0s-unsplash.jpg)
+  );
+}
+.card-4 {
+  @include card(url(../images/red-megaphone.jpg));
+}
+.card-5 {
+  @include card(url(../images/agenda-yellow.jpg));
+}
+.card-6 {
+  @include card(url(../images/event-orgarnizer.jpg));
 }
 
 .intro {
   width: 170px;
-
   margin: 0 auto;
   color: $txt-color;
   font-family: 'Droid Serif', serif;
@@ -143,7 +111,6 @@ hr {
   bottom: 100px;
   left: 0;
   margin: 0 auto;
-  /* padding: 0 50px; */
   color: $txt-color;
   font-family: 'Droid Serif', serif;
   font-style: 16px;

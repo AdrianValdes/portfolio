@@ -7,7 +7,7 @@
   right: 0;
   width: 100vw;
   height: 100vh;
-  background: #272727;
+  background: $dark;
   animation: fakeLoad 1.7s linear forwards;
 }
 
@@ -27,12 +27,8 @@
   100% {
     -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
     transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-    display: block;
-    /*  height: 200vh; */
-    /* top: 0; */
     z-index: -1;
     opacity: 0;
-    display: none;
   }
 }
 .loading-bar-wrapper {
