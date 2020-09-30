@@ -4,11 +4,13 @@ const arts = document.getElementsByClassName('art');
 const glitch = document.getElementById('glitch');
 const arrow = document.getElementById('arrow');
 
-const scrollHeight = scrollContent.getBoundingClientRect().width;
-console.log('scrollHeight: ' + scrollHeight);
-console.log('offsetHeight: ' + scrollContent.offsetWidth);
-fakeHeight.style.height = `${scrollHeight}px`;
-console.log(fakeHeight.style.height);
+window.onload = () => {
+  const scrollHeight = scrollContent.getBoundingClientRect().width;
+  console.log('scrollHeight: ' + scrollHeight);
+  console.log('offsetHeight: ' + scrollContent.offsetWidth);
+  fakeHeight.style.height = `${scrollHeight}px`;
+  console.log(fakeHeight.style.height);
+};
 
 window.addEventListener('scroll', (e) => {
   translate(window.pageYOffset);
