@@ -9,7 +9,9 @@
     <title>AdrianValdes</title>
   </head>
   <body class="index">
+    <div id="fake-height"></div>
     <!-- Fake Loading -->
+
     <div class="fake-loading">
       <div class="loading-bar-wrapper">
         <div class="loading-bar-name">Adrian Valdes</div>
@@ -19,24 +21,26 @@
     <main class="scroll" id="main">
       <section class="scroll-content" id="scroll-content">
         <!-- 1st Section -->
-        <article class="article-1">
-          <img
+        <section class="section-1">
+          <!-- <img
             src="./images/icons/icons8-arrow-100-b.png"
             alt="down arrow"
             class="down-arrow"
-          />
-          <p>clean code is&nbsp</p>
-          <p id="glitch" onclick="toggleGlitch()" class="glitch">
-            <a href="#projects-cards">art</a>
-            <span class="art" aria-hidden="true">art</span
-            ><span class="art" aria-hidden="true">art</span>
-          </p>
-        </article>
+          /> -->
+          <div class="text-wrapper">
+            <p class="clean-code">clean code is</p>
+            <p id="glitch" onclick="toggleGlitch()" class="glitch">
+              <a href="#">art</a>
+              <span class="art" aria-hidden="true">art</span
+              ><span class="art" aria-hidden="true">art</span>
+            </p>
+          </div>
+        </section>
 
         <!-- 2nd Section -->
-        <article class="article-2">
+        <section class="section-2">
           <div class="wrapper-outer">
-            <h1>work.</h1>
+            <h1>work<span>.</span></h1>
             <section class="card-wrapper" id="projects-cards">
               <!-- 1st card -->
               <div class="card-1">
@@ -217,10 +221,10 @@
               <!-- /.blog-card -->
             </section>
           </div>
-        </article>
+        </section>
 
         <!-- 3rd Section -->
-        <article class="article-3">
+        <section class="section-3">
           <div class="floating-icons-wrapper">
             <img
               class="floating-icon1"
@@ -298,7 +302,7 @@
               ><img src="./images/icons/mail-w.svg" alt="mail icon"
             /></a>
           </footer>
-        </article>
+        </section>
       </section>
     </main>
   </body>

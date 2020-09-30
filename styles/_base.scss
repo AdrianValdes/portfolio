@@ -15,34 +15,35 @@ a {
   Base
   ==========*/
 body {
-  height: 3300px;
+  //border: 5px solid rebeccapurple;
+  position: relative;
   min-height: 100vh;
   overflow-y: scroll;
-  width: 100%;
-  min-width: 100%;
-  position: relative;
+  /* width: 100%;
+  min-width: 100%; */
   font-family: $font-family;
   background-color: $dark;
   //background-image: linear-gradient(to left, #1f1d1d, #000000 94%);
   /*  background-color: rgba(214, 202, 200, 0.568); */
+
+  .scroll {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    .scroll-content {
+      // border: 4px solid white;
+      display: flex;
+      position: absolute;
+      height: 100vh;
+    }
+  }
+}
+#fake-height {
+  // border: 10px solid coral;
 }
 
-.scroll {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-  /* overflow: hidden; */
-}
-
-.scroll-content {
-  display: flex;
-  position: absolute;
-  height: 100vh;
-  max-width: 3300px;
-}
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   body {
     height: 2800px;
   }
@@ -52,3 +53,4 @@ body {
     max-width: 3000px;
   }
 }
+ */

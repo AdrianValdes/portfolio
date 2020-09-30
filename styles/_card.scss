@@ -1,14 +1,5 @@
-.card-wrapper {
-  display: grid;
-  max-width: 1200px;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 0.5rem;
-  padding: 1rem 0rem;
-}
-
 @mixin card($image) {
   background: $image center / cover no-repeat;
-  white-space: initial;
   width: $card-width;
   height: $card-height;
   position: relative;
@@ -118,7 +109,6 @@
   z-index: 20;
   opacity: 0;
   transition: bottom 0.3s, opacity 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
-
   cursor: pointer;
 }
 
@@ -139,7 +129,7 @@
     margin: 0 5px 0 0;
     padding: 0 0 0 20px;
     display: inline-block;
-    color: #dce3e7;
+    color: $txt-color;
     font-family: 'Roboto', sans-serif;
     font-size: 0.8rem;
     position: relative;

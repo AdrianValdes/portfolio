@@ -1,0 +1,66 @@
+.section-3 {
+  //border: 2px solid royalblue;
+  position: relative;
+  width: 100vw;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: $txt-color;
+
+  .paragraphs-container {
+    // border: 2px solid seagreen;
+    max-width: 60%;
+    margin: 5% auto;
+    flex-grow: 1;
+
+    & .salutation {
+      font-size: 1.5em;
+      text-shadow: rgba(255, 255, 255, 0.15) 0px 5px 15px;
+      color: whitesmoke;
+    }
+    .my-name {
+      color: white;
+
+      &:hover {
+        color: $blue-icon;
+      }
+    }
+    p {
+      white-space: initial;
+      line-height: 1.5;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+    }
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem;
+
+    img {
+      display: inline-block;
+
+      &:hover {
+        transform: rotate(-30deg);
+      }
+    }
+  }
+}
+
+@media (max-width: map-get($breakpoints, 'phone' )) {
+  .section-3 .paragraphs-container {
+    max-width: 100%;
+    padding: 0 1.5rem;
+
+    p {
+      line-height: initial;
+      font-size: 1rem;
+    }
+  }
+}
+/*  Icons made by <a href="https://www.flaticon.com/authors/iconixar" title="iconixar">iconixar</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> */
+/* <a href="https://icons8.com/icon/Vra58PN2KmI5/react">React icon by Icons8</a> */
+/* <a href="https://icons8.com/icon/NfbyHexzVEDk/react">React icon by Icons8</a> */
+/* <a target="_blank" href="https://icons8.com/icons/set/compare-git">Compare Git icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */

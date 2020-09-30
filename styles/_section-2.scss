@@ -1,0 +1,46 @@
+.section-2 {
+  // border: 3px solid gold;
+  height: 100vh;
+  padding: 0 2rem;
+
+  .wrapper-outer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      text-align: center;
+      margin-top: 2rem;
+      color: $txt-color;
+      padding-left: 1.5rem;
+      letter-spacing: 1.1px;
+
+      &:hover {
+        color: white;
+        cursor: pointer;
+        span {
+          color: $h-color;
+        }
+      }
+    }
+
+    .card-wrapper {
+      display: grid;
+      max-width: 1200px;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 0.5rem;
+      padding: 1rem 0rem;
+    }
+  }
+}
+
+@media (max-width: map-get($breakpoints, 'phone' )) {
+  .section-2 {
+    .wrapper-outer {
+      h1 {
+        text-align: start;
+      }
+    }
+  }
+}

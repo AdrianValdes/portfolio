@@ -1,0 +1,66 @@
+.section-1 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 2rem;
+  margin-right: 5rem;
+
+  /* font */
+  font-size: 7.5rem;
+  color: $txt-color;
+
+  /* display */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .down-arrow {
+    position: absolute;
+    bottom: 35%;
+    left: 10%;
+    height: 50px;
+    width: 50px;
+    transform: rotate(90deg);
+    cursor: pointer;
+  }
+  a,
+  p {
+    display: inline-block;
+  }
+  span {
+    cursor: pointer;
+  }
+}
+
+/* pseudo element arrow */
+/* .clean-code {
+  position: relative;
+  &::before {
+    content: url(../images/icons/icons8-arrow-50-w.png);
+    position: absolute;
+    left: 8.5%;
+    top: 48%;
+    transform: rotate(90deg);
+  }
+} */
+@media (max-width: map-get($breakpoints, 'phone' )) {
+  .section-1 {
+    max-height: 100vh;
+    font-size: 7rem;
+    .down-arrow {
+      bottom: 0%;
+    }
+  }
+}
+
+@media (min-width: map-get($breakpoints, 'tablet' )) and (max-width: map-get($breakpoints, 'desktop' )) {
+  .section-1 {
+    font-size: 6rem;
+    /* width: 600px; */
+    .down-arrow {
+      bottom: 15%;
+      left: 25%;
+    }
+  }
+}
+/* <a target="_blank" href="https://icons8.com/icons/set/down">Down icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */

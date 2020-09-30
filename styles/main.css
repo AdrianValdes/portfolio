@@ -40,34 +40,27 @@ a {
   Base
   ==========*/
 body {
-  height: 3300px;
+  position: relative;
   min-height: 100vh;
   overflow-y: scroll;
-  width: 100%;
-  min-width: 100%;
-  position: relative;
+  /* width: 100%;
+  min-width: 100%; */
   font-family: "Inter", sans-serif;
   background-color: #272727;
   /*  background-color: rgba(214, 202, 200, 0.568); */
 }
-
-.scroll {
+body .scroll {
   position: fixed;
   top: 0px;
   left: 0px;
-  height: 100%;
-  width: 100%;
-  /* overflow: hidden; */
 }
-
-.scroll-content {
+body .scroll .scroll-content {
   display: flex;
   position: absolute;
   height: 100vh;
-  max-width: 3300px;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   body {
     height: 2800px;
   }
@@ -77,6 +70,7 @@ body {
     max-width: 3000px;
   }
 }
+ */
 /*=========
   text
   ==========*/
@@ -255,136 +249,8 @@ body {
   }
 }
 /*==========
-  UI components
+  icons
   ==========*/
-.article-1 {
-  /* position: absolute;
-    top: 0px;
-    left: 0px; */
-  position: relative;
-  min-width: 100vw;
-  height: 100vh;
-  /* font */
-  font-size: 7.5rem;
-  color: #dce3e7;
-  /* display */
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0 2rem;
-  margin-right: 10rem;
-}
-.article-1 p {
-  display: inline-block;
-}
-.article-1 .down-arrow {
-  position: absolute;
-  bottom: 25%;
-  left: 50%;
-  height: 50px;
-  width: 50px;
-  transform: rotate(90deg);
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .article-1 {
-    display: block;
-    max-height: 100vh;
-    font-size: 7rem;
-  }
-}
-@media (max-width: 1024px) {
-  .article-1 {
-    font-size: 6rem;
-    width: 600px;
-  }
-  .article-1 .down-arrow {
-    bottom: 10%;
-  }
-}
-/* <a target="_blank" href="https://icons8.com/icons/set/down">Down icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */
-.article-2 {
-  /*  position: absolute;
-    top: 0px;
-    left: 782.89px; */
-  /* max-width: 1200px; */
-  height: 100vh;
-  /*  display: flex;
-  flex-direction: column;
-  justify-content: center; */
-  padding: 0 2rem;
-}
-.article-2 h1 {
-  text-align: center;
-  margin-top: 2rem;
-  color: #dce3e7;
-  padding-left: 1.5rem;
-  letter-spacing: 1.1px;
-}
-
-.wrapper-outer {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-@media (max-width: 768px) {
-  .article-2 h1 {
-    text-align: start;
-  }
-}
-.article-3 {
-  /* position: absolute;
-    top: 0px;
-    left: 1299.39px; */
-  min-width: 100vw;
-  max-height: 100vh;
-  color: #dae4e9;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.article-3 .paragraphs-container {
-  max-width: 60%;
-  margin: 5% auto;
-  flex-grow: 1;
-}
-.article-3 .paragraphs-container .salutation {
-  font-size: 1.5em;
-  text-shadow: rgba(255, 255, 255, 0.15) 0px 5px 15px;
-  color: whitesmoke;
-}
-.article-3 .paragraphs-container .my-name {
-  color: #fa7ea8;
-  color: #9cc9e3;
-  /* color: $yellow; */
-  color: white;
-  /*   color: rgb(255, 243, 130); */
-}
-.article-3 .paragraphs-container .my-name:hover {
-  color: #3294a6;
-}
-.article-3 .paragraphs-container p {
-  white-space: initial;
-  line-height: 1.5;
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin: 0.5rem 0;
-}
-.article-3 footer {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 2rem;
-}
-.article-3 footer img {
-  display: inline-block;
-}
-.article-3 footer img:hover {
-  transform: rotate(-30deg);
-}
-
 .floating-icons-wrapper {
   position: absolute;
   width: 80%;
@@ -478,10 +344,6 @@ body {
   0% {
     transform: translate(600%, 300%) rotate(700deg);
   }
-  100% {
-    /*   transform: translate(700%, 300%); */
-    /* transform: rotate(700deg); */
-  }
 }
 @keyframes float-icon-horizontal {
   0% {
@@ -526,12 +388,157 @@ body {
     transform: translate(0%, 700%);
   }
 }
+/*==========
+  UI components
+  ==========*/
+.section-1 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 2rem;
+  margin-right: 5rem;
+  /* font */
+  font-size: 7.5rem;
+  color: #dce3e7;
+  /* display */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-1 .down-arrow {
+  position: absolute;
+  bottom: 35%;
+  left: 10%;
+  height: 50px;
+  width: 50px;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+.section-1 a,
+.section-1 p {
+  display: inline-block;
+}
+.section-1 span {
+  cursor: pointer;
+}
+
+/* pseudo element arrow */
+/* .clean-code {
+  position: relative;
+  &::before {
+    content: url(../images/icons/icons8-arrow-50-w.png);
+    position: absolute;
+    left: 8.5%;
+    top: 48%;
+    transform: rotate(90deg);
+  }
+} */
 @media (max-width: 768px) {
-  .article-3 .paragraphs-container {
+  .section-1 {
+    max-height: 100vh;
+    font-size: 7rem;
+  }
+  .section-1 .down-arrow {
+    bottom: 0%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .section-1 {
+    font-size: 6rem;
+    /* width: 600px; */
+  }
+  .section-1 .down-arrow {
+    bottom: 15%;
+    left: 25%;
+  }
+}
+/* <a target="_blank" href="https://icons8.com/icons/set/down">Down icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */
+.section-2 {
+  height: 100vh;
+  padding: 0 2rem;
+}
+.section-2 .wrapper-outer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section-2 .wrapper-outer h1 {
+  text-align: center;
+  margin-top: 2rem;
+  color: #dce3e7;
+  padding-left: 1.5rem;
+  letter-spacing: 1.1px;
+}
+.section-2 .wrapper-outer h1:hover {
+  color: white;
+  cursor: pointer;
+}
+.section-2 .wrapper-outer h1:hover span {
+  color: #9cc9e3;
+}
+.section-2 .wrapper-outer .card-wrapper {
+  display: grid;
+  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 0.5rem;
+  padding: 1rem 0rem;
+}
+
+@media (max-width: 768px) {
+  .section-2 .wrapper-outer h1 {
+    text-align: start;
+  }
+}
+.section-3 {
+  position: relative;
+  width: 100vw;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #dce3e7;
+}
+.section-3 .paragraphs-container {
+  max-width: 60%;
+  margin: 5% auto;
+  flex-grow: 1;
+}
+.section-3 .paragraphs-container .salutation {
+  font-size: 1.5em;
+  text-shadow: rgba(255, 255, 255, 0.15) 0px 5px 15px;
+  color: whitesmoke;
+}
+.section-3 .paragraphs-container .my-name {
+  color: white;
+}
+.section-3 .paragraphs-container .my-name:hover {
+  color: #3294a6;
+}
+.section-3 .paragraphs-container p {
+  white-space: initial;
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+.section-3 footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem;
+}
+.section-3 footer img {
+  display: inline-block;
+}
+.section-3 footer img:hover {
+  transform: rotate(-30deg);
+}
+
+@media (max-width: 768px) {
+  .section-3 .paragraphs-container {
     max-width: 100%;
     padding: 0 1.5rem;
   }
-  .article-3 .paragraphs-container p {
+  .section-3 .paragraphs-container p {
     line-height: initial;
     font-size: 1rem;
   }
@@ -540,17 +547,8 @@ body {
 /* <a href="https://icons8.com/icon/Vra58PN2KmI5/react">React icon by Icons8</a> */
 /* <a href="https://icons8.com/icon/NfbyHexzVEDk/react">React icon by Icons8</a> */
 /* <a target="_blank" href="https://icons8.com/icons/set/compare-git">Compare Git icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */
-.card-wrapper {
-  display: grid;
-  max-width: 1200px;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 0.5rem;
-  padding: 1rem 0rem;
-}
-
 .card-1 {
   background: url(../images/library.jpg) center/cover no-repeat;
-  white-space: initial;
   width: 294.11px;
   height: 205.88px;
   position: relative;
@@ -611,7 +609,6 @@ body {
 
 .card-2 {
   background: url(../images/navbar-icon-darkmode.png) center/cover no-repeat;
-  white-space: initial;
   width: 294.11px;
   height: 205.88px;
   position: relative;
@@ -672,7 +669,6 @@ body {
 
 .card-3 {
   background: url(../images/plants/kaufmann-mercantile-a7Woj8W6J0s-unsplash.jpg) center/cover no-repeat;
-  white-space: initial;
   width: 294.11px;
   height: 205.88px;
   position: relative;
@@ -733,7 +729,6 @@ body {
 
 .card-4 {
   background: url(../images/red-megaphone.jpg) center/cover no-repeat;
-  white-space: initial;
   width: 294.11px;
   height: 205.88px;
   position: relative;
@@ -794,7 +789,6 @@ body {
 
 .card-5 {
   background: url(../images/agenda-yellow.jpg) center/cover no-repeat;
-  white-space: initial;
   width: 294.11px;
   height: 205.88px;
   position: relative;
@@ -855,7 +849,6 @@ body {
 
 .card-6 {
   background: url(../images/event-orgarnizer.jpg) center/cover no-repeat;
-  white-space: initial;
   width: 294.11px;
   height: 205.88px;
   position: relative;
