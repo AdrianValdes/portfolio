@@ -6,19 +6,16 @@ const arrow = document.getElementById('arrow');
 
 window.onload = () => {
   const scrollHeight = scrollContent.getBoundingClientRect().width;
-  console.log('scrollHeight: ' + scrollHeight);
-  console.log('offsetHeight: ' + scrollContent.offsetWidth);
   fakeHeight.style.height = `${scrollHeight}px`;
-  console.log(fakeHeight.style.height);
+
+  window.addEventListener('scroll', (e) => {
+    translate(window.pageYOffset);
+  });
+
+  function translate(pixels) {
+    scrollContent.style.transform = `translateX(${-pixels}px)`;
+  }
 };
-
-window.addEventListener('scroll', (e) => {
-  translate(window.pageYOffset);
-});
-
-function translate(pixels) {
-  scrollContent.style.transform = `translateX(${-pixels}px)`;
-}
 
 function toggleGlitch() {
   console.log(arts);
