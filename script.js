@@ -4,9 +4,6 @@ const arts = document.getElementsByClassName('art');
 const glitch = document.getElementById('glitch');
 const main = document.getElementById('main');
 
-console.log('main', main.offsetWidth, main.offsetHeight);
-console.log(main.getBoundingClientRect());
-
 window.addEventListener('scroll', (e) => {
   translate(window.pageYOffset);
 });
