@@ -62,7 +62,7 @@ body {
 
 .scroll-content {
   display: flex;
-  position: relative;
+  position: absolute;
   height: 100vh;
   width: 3300px;
 }
