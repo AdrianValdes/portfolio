@@ -1,0 +1,222 @@
+.article-3 {
+  // border: 2px solid royalblue;
+  /* position: absolute;
+    top: 0px;
+    left: 1299.39px; */
+  //overflow-y: scroll;
+  min-width: 100vw;
+  max-height: 100vh;
+  color: rgb(218, 228, 233);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .paragraphs-container {
+    // border: 2px solid seagreen;
+
+    max-width: 60%;
+    margin: 5% auto;
+    flex-grow: 1;
+
+    & .salutation {
+      font-size: 1.5em;
+      text-shadow: rgba(255, 255, 255, 0.15) 0px 5px 15px;
+      color: whitesmoke;
+    }
+    .my-name {
+      color: rgb(250, 126, 168);
+      color: $h-color;
+      //font-size: 1.05em;
+      /* color: $yellow; */
+      color: white;
+      /*   color: rgb(255, 243, 130); */
+
+      &:hover {
+        color: #3294a6;
+      }
+    }
+    p {
+      white-space: initial;
+      line-height: 1.5;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+    }
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem;
+
+    img {
+      display: inline-block;
+
+      &:hover {
+        transform: rotate(-30deg);
+      }
+    }
+  }
+}
+@mixin floating-icon {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  z-index: -1;
+}
+.floating-icons-wrapper {
+  // border: 2px solid red;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  z-index: -1;
+
+  /* icon Javascript */
+  .floating-icon1 {
+    @include floating-icon;
+    bottom: 5%;
+    left: 30%;
+    animation: float-icon-horizontal 29s linear infinite alternate-reverse;
+  }
+
+  /* icon React */
+  .floating-icon2 {
+    @include floating-icon;
+    top: 35%;
+    left: 40%;
+    animation: float-icon1 29s linear infinite alternate-reverse;
+  }
+
+  /* icon Github */
+  .floating-icon3 {
+    @include floating-icon;
+    top: -5%;
+    left: 25%;
+    animation: float-icon2 29s linear infinite alternate-reverse;
+  }
+
+  /* icon firebase */
+  .floating-icon4 {
+    @include floating-icon;
+    top: 15%;
+    left: 0%;
+    animation: float-icon5 29s linear infinite alternate-reverse;
+  }
+
+  /* icon git */
+  .floating-icon5 {
+    @include floating-icon;
+    top: 15%;
+    right: 15%;
+    animation: float-icon5 29s linear infinite alternate-reverse;
+  }
+
+  /* icon css */
+  .floating-icon6 {
+    @include floating-icon;
+    top: -5%;
+    right: 35%;
+    animation: float-icon4 29s linear infinite alternate-reverse;
+  }
+
+  /* icon node */
+  .floating-icon7 {
+    @include floating-icon;
+    top: -15%;
+    right: 25%;
+    animation: float-icon4 29s linear infinite alternate-reverse;
+  }
+
+  /* icon sass */
+  .floating-icon8 {
+    @include floating-icon;
+    top: 5%;
+    left: 5%;
+    animation: float-icon1 29s linear infinite alternate-reverse;
+  }
+}
+@keyframes float-icon1 {
+  0% {
+    transform: translate(600%, 300%) rotate(700deg);
+  }
+
+  50% {
+  }
+
+  100% {
+    /*   transform: translate(700%, 300%); */
+    /* transform: rotate(700deg); */
+  }
+}
+
+@keyframes float-icon-horizontal {
+  0% {
+    transform: translateX(700%);
+  }
+
+  50% {
+    transform: rotate(-40deg);
+  }
+
+  100% {
+    transform: translateX(700%);
+  }
+}
+
+@keyframes float-icon2 {
+  0% {
+    transform: translateX(-400%) rotate(-360deg);
+  }
+
+  100% {
+    transform: translateX(600%);
+  }
+}
+
+@keyframes float-icon3 {
+  0% {
+    transform: translateY(-400%);
+  }
+
+  100% {
+    transform: translateY(600%);
+  }
+}
+
+@keyframes float-icon4 {
+  0% {
+    transform: translateY(300%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes float-icon5 {
+  0% {
+    transform: translate(400%, 300%);
+  }
+
+  100% {
+    transform: translate(0%, 700%);
+  }
+}
+
+@media (max-width: 768px) {
+  .article-3 .paragraphs-container {
+    max-width: 100%;
+    padding: 0 1.5rem;
+
+    p {
+      line-height: initial;
+      font-size: 1rem;
+    }
+  }
+}
+/*  Icons made by <a href="https://www.flaticon.com/authors/iconixar" title="iconixar">iconixar</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> */
+/* <a href="https://icons8.com/icon/Vra58PN2KmI5/react">React icon by Icons8</a> */
+/* <a href="https://icons8.com/icon/NfbyHexzVEDk/react">React icon by Icons8</a> */
+/* <a target="_blank" href="https://icons8.com/icons/set/compare-git">Compare Git icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */

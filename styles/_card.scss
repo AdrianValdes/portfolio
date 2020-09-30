@@ -1,0 +1,216 @@
+/* ++++++++++++++++++ SECTION 2 +++++++++++++++++++++++*/
+/* Cards wrapper */
+
+.card-wrapper {
+  //border: 2px solid gold;
+  /*   height: 100vh;
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: center;
+
+  align-content: flex-start; */
+  display: grid;
+  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 0.5rem;
+  padding: 1rem 0rem;
+}
+.blog-card {
+  white-space: initial;
+  width: $card-width;
+  height: $card-height;
+  position: relative;
+  margin: 1rem 1rem;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px rgba(7, 8, 17, 0.5);
+  text-align: center;
+
+  &.spring-fever {
+    background: url(../images/library.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    h3 {
+      text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px;
+    }
+  }
+  &.spring-fever2 {
+    background: url(../images/navbar-icon-darkmode.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    h3 {
+      text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px;
+    }
+  }
+  &.spring-fever3 {
+    background: url(../images/plants/kaufmann-mercantile-a7Woj8W6J0s-unsplash.jpg)
+      no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  &.spring-fever4 {
+    background: url(../images/red-megaphone.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  &.spring-fever5 {
+    background: url(../images/agenda-yellow.jpg) no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    h3 {
+      text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px;
+    }
+  }
+  &.spring-fever6 {
+    background: url(../images/event-orgarnizer.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    h3 {
+      text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px;
+    }
+  }
+  .color-overlay {
+    /* Rectangle 11: */
+    background: rgba(84, 104, 110, 0.4);
+    width: $card-width;
+    height: $card-height;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    transition: background 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+  }
+
+  &:hover {
+    .card-info {
+      opacity: 1;
+      bottom: 50px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      color: $h-color;
+    }
+    .color-overlay {
+      background: rgba(84, 104, 110, 0.8);
+    }
+
+    .title-content {
+      opacity: 0;
+    }
+  }
+}
+
+.title-content {
+  text-align: center;
+  margin: 30px 0 0 0;
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: $h-color;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 0;
+}
+hr {
+  width: 50px;
+  height: 3px;
+  margin: 10px auto;
+  border: 0;
+  background: $yellow;
+}
+
+.intro {
+  width: 170px;
+
+  margin: 0 auto;
+  color: $txt-color;
+  font-family: 'Droid Serif', serif;
+  font-size: 13px;
+  font-style: italic;
+  line-height: 18px;
+}
+.card-info {
+  width: 100%;
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  margin: 0 auto;
+  /* padding: 0 50px; */
+  color: $txt-color;
+  font-family: 'Droid Serif', serif;
+  font-style: 16px;
+  line-height: 24px;
+  z-index: 20;
+  opacity: 0;
+  transition: bottom 0.3s, opacity 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+
+  cursor: pointer;
+}
+
+.utility-info {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  z-index: 20;
+}
+.utility-list {
+  list-style-type: none;
+  margin: 0 0 10px 5px;
+  padding: 0;
+  width: 100%;
+
+  li {
+    cursor: pointer;
+    margin: 0 5px 0 0;
+    padding: 0 0 0 20px;
+    display: inline-block;
+    color: #dce3e7;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    position: relative;
+
+    &.comments {
+      background: url(../images/icons/github-w.svg) no-repeat 0 0.1em;
+      background-size: contain;
+    }
+
+    &:hover {
+      color: #fff;
+    }
+    &:hover::after {
+      width: 75%;
+      transition: 0.3s ease all;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 105%;
+      height: 1.5px;
+      width: 0%;
+      left: 28%;
+      background-color: rgba(255, 255, 255, 0.3);
+      transition: 0.5s ease all 0.3s;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card-wrapper {
+    width: 1200px;
+  }
+}
+/*<span>Photo by <a href="https://unsplash.com/@theunsteady5?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Edwin Andrade</a> on <a href="https://unsplash.com/s/photos/events?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>  */
+/* <span>Photo by <a href="https://unsplash.com/@anafsnt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Ana Flávia</a> on <a href="https://unsplash.com/s/photos/opinion?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> */
+/* <span>Photo by <a href="https://unsplash.com/@esteejanssens?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Estée Janssens</a> on <a href="https://unsplash.com/s/photos/calendar?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> */
+/* <span>Photo by <a href="https://unsplash.com/@jeshoots?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">JESHOOTS.COM</a> on <a href="https://unsplash.com/s/photos/calendar?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> */
+/* <span>Photo by <a href="https://unsplash.com/@hugorrocha?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Hugo Rocha</a> on <a href="https://unsplash.com/s/photos/calendar?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> */
+/* <span>Photo by <a href="https://unsplash.com/@esteejanssens?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Estée Janssens</a> on <a href="https://unsplash.com/s/photos/calendar?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> */
