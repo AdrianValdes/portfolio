@@ -6,33 +6,22 @@ const arrow = document.getElementById('arrow');
 const innerWidth = window.innerWidth;
 
 window.onload = () => {
-  const scrollWidth = scrollContent.getBoundingClientRect().width;
-  const scrollHeight = scrollContent.getBoundingClientRect().height;
+  let scrollWidth = scrollContent.getBoundingClientRect().width;
+  let scrollHeight = scrollContent.getBoundingClientRect().height;
+  let vW = window.innerWidth;
+  let vH = window.innerHeight;
+  fakeHeight.style.height = `${scrollWidth - vW + vH}px`;
 
-  console.log('scrollWidth :' + scrollWidth);
-
-  console.log('scrollHeight : ' + scrollHeight);
-
-  if (scrollWidth / scrollHeight > 8) {
-    fakeHeight.style.height = `${scrollWidth + scrollHeight}px`;
-  }
-
-  if (scrollWidth / scrollHeight > 0.5 && scrollWidth / scrollHeight < 2) {
-    fakeHeight.style.height = `${scrollWidth}px`;
-  }
-  if (scrollWidth / scrollHeight > 2 && scrollWidth / scrollHeight < 5) {
-    fakeHeight.style.height = `${scrollWidth + scrollHeight - 100}px`;
-    console.log('hello');
-  }
-  if (scrollWidth / scrollHeight >= 5 && scrollWidth / scrollHeight <= 8) {
-    fakeHeight.style.height = `${scrollWidth - 300}px`;
-  }
+  window.addEventListener('resize', () => {
+    let reScrollWidth = scrollContent.getBoundingClientRect().width;
+    let reScrollHeight = scrollContent.getBoundingClientRect().height;
+    let reVW = window.innerWidth;
+    let reVH = window.innerHeight;
+    fakeHeight.style.height = `${reScrollWidth - reVW + reVH}px`;
+  });
 
   window.addEventListener('scroll', (e) => {
-    if (window.pageYOffset < 7400) {
-      translate(window.pageYOffset);
-      console.log('translated pixels: ' + window.pageYOffset);
-    }
+    translate(window.pageYOffset);
   });
 
   function translate(pixels) {
