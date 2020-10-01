@@ -1,15 +1,13 @@
 .section-3 {
-  //border: 2px solid royalblue;
   position: relative;
   width: 100vw;
-  max-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   color: $txt-color;
 
   .paragraphs-container {
-    // border: 2px solid seagreen;
-    max-width: 60%;
+    max-width: 670px;
     margin: 5% auto;
     flex-grow: 1;
 

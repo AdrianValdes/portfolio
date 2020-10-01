@@ -2,12 +2,14 @@
   position: relative;
   width: 100vw;
   height: 100vh;
+
   padding: 0 2rem;
   margin-right: 5rem;
 
   /* font */
-  font-size: 7.5rem;
+  font-size: 8.5rem;
   color: $txt-color;
+  font-family: 'Montserrat', sans-serif;
 
   /* display */
   display: flex;
@@ -16,8 +18,8 @@
 
   .down-arrow {
     position: absolute;
-    bottom: 35%;
-    left: 10%;
+    bottom: 5%;
+    left: 50%;
     height: 50px;
     width: 50px;
     transform: rotate(90deg);
@@ -31,18 +33,49 @@
     cursor: pointer;
   }
 }
+.tooltip {
+  height: 40px;
+  width: 40px;
+  bottom: 5%;
+  left: 50%;
+  position: absolute;
+  display: inline-block;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.137);
 
-/* pseudo element arrow */
-/* .clean-code {
-  position: relative;
-  &::before {
-    content: url(../images/icons/icons8-arrow-50-w.png);
-    position: absolute;
-    left: 8.5%;
-    top: 48%;
-    transform: rotate(90deg);
+  span {
+    font-size: 1rem;
   }
-} */
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(29, 27, 27, 0.705);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 120%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(22, 20, 20, 0.603) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 @media (max-width: map-get($breakpoints, 'phone' )) {
   .section-1 {
     max-height: 100vh;
@@ -56,7 +89,7 @@
 @media (min-width: map-get($breakpoints, 'tablet' )) and (max-width: map-get($breakpoints, 'desktop' )) {
   .section-1 {
     font-size: 6rem;
-    /* width: 600px; */
+
     .down-arrow {
       bottom: 15%;
       left: 25%;

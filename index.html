@@ -12,21 +12,25 @@
     <div id="fake-height"></div>
     <!-- Fake Loading -->
 
-    <div class="fake-loading">
+    <!--   <div class="fake-loading">
       <div class="loading-bar-wrapper">
         <div class="loading-bar-name">Adrian Valdes</div>
         <div class="loading-bar"></div>
       </div>
-    </div>
+    </div> -->
     <main class="scroll" id="main">
       <section class="scroll-content" id="scroll-content">
         <!-- 1st Section -->
         <section class="section-1">
-          <!-- <img
-            src="./images/icons/icons8-arrow-100-b.png"
-            alt="down arrow"
-            class="down-arrow"
-          /> -->
+          <div class="tooltip">
+            <img
+              src="./images/icons/go-down/dot-arrow-b.svg"
+              alt="down arrow"
+              class="down-arrow"
+              id="arrow"
+            />
+            <span class="tooltiptext">Just scroll</span>
+          </div>
           <div class="text-wrapper">
             <p class="clean-code">clean code is</p>
             <p id="glitch" onclick="toggleGlitch()" class="glitch">
@@ -86,9 +90,9 @@
                   target="_blank"
                 >
                   <div class="card-info">
-                    Ghibli's Collection is web app that function as a dictionary
-                    of the movies made by the Ghibli's Studios. It uses the
-                    ghibliapi.herokuapp API.
+                    Ghibli's Collection is a web app that functions as a
+                    dictionary of the movies made by the Ghibli's Studios. It
+                    uses the ghibliapi.herokuapp API.
                   </div>
                 </a>
                 <!-- /.card-info -->

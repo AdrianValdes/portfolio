@@ -168,11 +168,20 @@ body .scroll .scroll-content {
     top: 50%;
     left: 15%;
   }
+
+  .loading-bar {
+    width: 250px;
+  }
+
+  .loading-bar-name {
+    left: 60px;
+  }
 }
 .glitch {
   position: relative;
   font-size: 7.5rem;
   font-weight: 700;
+  font-family: "Montserrat", sans-serif;
   /* text-transform: uppercase; */
   text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.05em 0 rgba(0, 255, 0, 0.75), 0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
   animation: glitch 0.5s infinite;
@@ -193,6 +202,7 @@ body .scroll .scroll-content {
   position: absolute;
   top: 0;
   left: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 .glitch span:first-of-type {
@@ -400,8 +410,9 @@ body .scroll .scroll-content {
   padding: 0 2rem;
   margin-right: 5rem;
   /* font */
-  font-size: 7.5rem;
+  font-size: 8.5rem;
   color: #dce3e7;
+  font-family: "Montserrat", sans-serif;
   /* display */
   display: flex;
   align-items: center;
@@ -409,8 +420,8 @@ body .scroll .scroll-content {
 }
 .section-1 .down-arrow {
   position: absolute;
-  bottom: 35%;
-  left: 10%;
+  bottom: 5%;
+  left: 50%;
   height: 50px;
   width: 50px;
   transform: rotate(90deg);
@@ -424,17 +435,49 @@ body .scroll .scroll-content {
   cursor: pointer;
 }
 
-/* pseudo element arrow */
-/* .clean-code {
-  position: relative;
-  &::before {
-    content: url(../images/icons/icons8-arrow-50-w.png);
-    position: absolute;
-    left: 8.5%;
-    top: 48%;
-    transform: rotate(90deg);
-  }
-} */
+.tooltip {
+  height: 40px;
+  width: 40px;
+  bottom: 5%;
+  left: 50%;
+  position: absolute;
+  display: inline-block;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.137);
+}
+.tooltip span {
+  font-size: 1rem;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(29, 27, 27, 0.705);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 120%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(22, 20, 20, 0.603) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 @media (max-width: 768px) {
   .section-1 {
     max-height: 100vh;
@@ -447,7 +490,6 @@ body .scroll .scroll-content {
 @media (min-width: 769px) and (max-width: 1024px) {
   .section-1 {
     font-size: 6rem;
-    /* width: 600px; */
   }
   .section-1 .down-arrow {
     bottom: 15%;
@@ -457,6 +499,9 @@ body .scroll .scroll-content {
 /* <a target="_blank" href="https://icons8.com/icons/set/down">Down icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */
 .section-2 {
   height: 100vh;
+  min-width: 100vw;
+  /*  max-width: 1200px;
+  max-height: 1200px; */
   padding: 0 2rem;
 }
 .section-2 .wrapper-outer {
@@ -464,6 +509,7 @@ body .scroll .scroll-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .section-2 .wrapper-outer h1 {
   text-align: center;
@@ -489,19 +535,19 @@ body .scroll .scroll-content {
 
 @media (max-width: 768px) {
   .section-2 .wrapper-outer h1 {
-    text-align: start;
+    align-self: flex-start;
   }
 }
 .section-3 {
   position: relative;
   width: 100vw;
-  max-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   color: #dce3e7;
 }
 .section-3 .paragraphs-container {
-  max-width: 60%;
+  max-width: 670px;
   margin: 5% auto;
   flex-grow: 1;
 }
