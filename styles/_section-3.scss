@@ -37,18 +37,25 @@
     justify-content: space-evenly;
     margin: 2rem;
 
-    img {
-      display: inline-block;
-
+    a {
       &:hover {
         transform: rotate(-30deg);
+      }
+
+      img {
+        display: inline-block;
       }
     }
   }
 }
 
 @media (max-width: map-get($breakpoints, 'phone' )) {
-  .section-3 .paragraphs-container {
+  .section-3 {
+    padding-top: 1rem;
+    text-align: justify;
+  }
+
+  .paragraphs-container {
     max-width: 100%;
     padding: 0 1.5rem;
 

@@ -23,9 +23,7 @@
       &:hover {
         color: white;
         cursor: pointer;
-        span {
-          color: $h-color;
-        }
+        filter: contrast(200%);
       }
     }
 

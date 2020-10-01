@@ -80,8 +80,22 @@
   .section-1 {
     max-height: 100vh;
     font-size: 7rem;
+    align-items: flex-start;
+
+    .text-wrapper {
+      margin-top: 2rem;
+    }
     .down-arrow {
       bottom: 0%;
+    }
+  }
+
+  .tooltip {
+    left: 75%;
+
+    .down-arrow {
+      width: 35px;
+      height: 35px;
     }
   }
 }

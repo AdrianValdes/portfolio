@@ -482,9 +482,21 @@ body .scroll .scroll-content {
   .section-1 {
     max-height: 100vh;
     font-size: 7rem;
+    align-items: flex-start;
+  }
+  .section-1 .text-wrapper {
+    margin-top: 2rem;
   }
   .section-1 .down-arrow {
     bottom: 0%;
+  }
+
+  .tooltip {
+    left: 75%;
+  }
+  .tooltip .down-arrow {
+    width: 35px;
+    height: 35px;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -521,9 +533,7 @@ body .scroll .scroll-content {
 .section-2 .wrapper-outer h1:hover {
   color: white;
   cursor: pointer;
-}
-.section-2 .wrapper-outer h1:hover span {
-  color: #9cc9e3;
+  filter: contrast(200%);
 }
 .section-2 .wrapper-outer .card-wrapper {
   display: grid;
@@ -574,19 +584,24 @@ body .scroll .scroll-content {
   justify-content: space-evenly;
   margin: 2rem;
 }
-.section-3 footer img {
-  display: inline-block;
-}
-.section-3 footer img:hover {
+.section-3 footer a:hover {
   transform: rotate(-30deg);
+}
+.section-3 footer a img {
+  display: inline-block;
 }
 
 @media (max-width: 768px) {
-  .section-3 .paragraphs-container {
+  .section-3 {
+    padding-top: 1rem;
+    text-align: justify;
+  }
+
+  .paragraphs-container {
     max-width: 100%;
     padding: 0 1.5rem;
   }
-  .section-3 .paragraphs-container p {
+  .paragraphs-container p {
     line-height: initial;
     font-size: 1rem;
   }
