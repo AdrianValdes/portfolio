@@ -14,7 +14,7 @@
   ==========
 */
 /*==========
-  components: card
+   card
   ==========*/
 /*==========
   breakpoints
@@ -43,11 +43,9 @@ body {
   position: relative;
   min-height: 100vh;
   overflow-y: scroll;
-  /* width: 100%;
-  min-width: 100%; */
-  font-family: "Inter", sans-serif;
   background-color: #272727;
-  /*  background-color: rgba(214, 202, 200, 0.568); */
+  /* font */
+  font-family: "Inter", sans-serif;
 }
 body .scroll {
   position: fixed;
@@ -62,17 +60,6 @@ body .scroll .scroll-content {
   height: 100vh;
 }
 
-/* @media (max-width: 768px) {
-  body {
-    height: 2800px;
-  }
-}
-@media (max-width: 1024px) {
-  .scroll-content {
-    max-width: 3000px;
-  }
-}
- */
 /*=========
   text
   ==========*/
@@ -454,7 +441,7 @@ body .scroll .scroll-content {
   background-color: rgba(29, 27, 27, 0.705);
   color: #fff;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 5px 0;
   position: absolute;
   z-index: 1;
@@ -512,8 +499,6 @@ body .scroll .scroll-content {
 .section-2 {
   height: 100vh;
   min-width: 100vw;
-  /*  max-width: 1200px;
-  max-height: 1200px; */
   padding: 0 2rem;
 }
 .section-2 .wrapper-outer {
