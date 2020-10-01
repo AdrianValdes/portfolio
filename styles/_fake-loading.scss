@@ -34,24 +34,27 @@
 .loading-bar-wrapper {
   position: absolute;
   top: 50%;
-  left: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 300px;
 }
 .loading-bar-name {
   width: 200px;
   color: white;
   position: absolute;
   z-index: 11;
-  left: 90px;
+  left: 50%;
+  transform: translateX(-50%);
   top: -25px;
   letter-spacing: 1.5px;
   font-style: normal;
   animation: loadbar-back 1.5s linear forwards;
+  text-align: center;
 }
 
 .loading-bar {
   z-index: 11;
-  top: 10%;
-  left: 40%;
   width: 300px;
   height: 2px;
   position: absolute;
