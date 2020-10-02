@@ -7,30 +7,29 @@ const innerWidth = window.innerWidth;
 
 window.onload = () => {
   let scrollWidth = scrollContent.getBoundingClientRect().width;
-  let scrollHeight = scrollContent.getBoundingClientRect().height;
   let vW = window.innerWidth;
   let vH = window.innerHeight;
   fakeHeight.style.height = `${scrollWidth - vW + vH}px`;
 
   window.addEventListener('resize', () => {
     let reScrollWidth = scrollContent.getBoundingClientRect().width;
-    let reScrollHeight = scrollContent.getBoundingClientRect().height;
+
     let reVW = window.innerWidth;
     let reVH = window.innerHeight;
     fakeHeight.style.height = `${reScrollWidth - reVW + reVH}px`;
   });
 
-  window.addEventListener('scroll', (e) => {
+  window.addEventListener('scroll', () => {
     translate(window.pageYOffset);
   });
-
-  function translate(pixels) {
-    scrollContent.style.transform = `translateX(${-pixels}px)`;
-    if (pixels > 50) {
-      arrow.style.transform = `rotate(${0}deg) `;
-    }
-  }
 };
+
+function translate(pixels) {
+  scrollContent.style.transform = `translateX(${-pixels}px)`;
+  if (pixels > 50) {
+    arrow.style.transform = `rotate(${0}deg) `;
+  }
+}
 
 function toggleGlitch() {
   console.log(arts);

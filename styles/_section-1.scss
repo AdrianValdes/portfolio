@@ -7,7 +7,9 @@
   margin-right: 5rem;
 
   /* font */
-  font-size: 8.5rem;
+
+  //font-size: 8.5rem;
+  font-size: clamp(8rem, calc(6.7143rem + 5.7143vw), 11rem);
   color: $txt-color;
   font-family: 'Montserrat', sans-serif;
 
@@ -23,6 +25,7 @@
     height: 50px;
     width: 50px;
     transform: rotate(90deg);
+    transition-duration: 1.5s;
     cursor: pointer;
   }
   a,
@@ -79,7 +82,7 @@
 @media (max-width: map-get($breakpoints, 'phone' )) {
   .section-1 {
     max-height: 100vh;
-    font-size: 7rem;
+    //font-size: 7rem;
     align-items: flex-start;
 
     .text-wrapper {
@@ -102,7 +105,7 @@
 
 @media (min-width: map-get($breakpoints, 'tablet' )) and (max-width: map-get($breakpoints, 'desktop' )) {
   .section-1 {
-    font-size: 6rem;
+    // font-size: 6rem;
 
     .down-arrow {
       bottom: 15%;

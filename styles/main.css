@@ -153,10 +153,9 @@ body .scroll .scroll-content {
 }
 .glitch {
   position: relative;
-  font-size: 7.5rem;
+  font-size: clamp(7rem, calc(6.1429rem + 3.8095vw), 9rem);
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
-  /* text-transform: uppercase; */
+  bottom: 5px;
   text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.05em 0 rgba(0, 255, 0, 0.75), 0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
   animation: glitch 0.5s infinite;
 }
@@ -176,7 +175,6 @@ body .scroll .scroll-content {
   position: absolute;
   top: 0;
   left: 0;
-  font-family: "Montserrat", sans-serif;
 }
 
 .glitch span:first-of-type {
@@ -229,11 +227,12 @@ body .scroll .scroll-content {
     transition-delay: 0s !important;
   }
 }
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .glitch {
     font-size: 6rem;
   }
 }
+ */
 /*==========
   icons
   ==========*/
@@ -384,7 +383,7 @@ body .scroll .scroll-content {
   padding: 0 2rem;
   margin-right: 5rem;
   /* font */
-  font-size: 8.5rem;
+  font-size: clamp(8rem, calc(6.7143rem + 5.7143vw), 11rem);
   color: #dce3e7;
   font-family: "Montserrat", sans-serif;
   /* display */
@@ -399,6 +398,7 @@ body .scroll .scroll-content {
   height: 50px;
   width: 50px;
   transform: rotate(90deg);
+  transition-duration: 1.5s;
   cursor: pointer;
 }
 .section-1 a,
@@ -455,7 +455,6 @@ body .scroll .scroll-content {
 @media (max-width: 768px) {
   .section-1 {
     max-height: 100vh;
-    font-size: 7rem;
     align-items: flex-start;
   }
   .section-1 .text-wrapper {
@@ -474,9 +473,6 @@ body .scroll .scroll-content {
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  .section-1 {
-    font-size: 6rem;
-  }
   .section-1 .down-arrow {
     bottom: 15%;
     left: 25%;
@@ -636,7 +632,7 @@ body .scroll .scroll-content {
   color: #9cc9e3;
 }
 .card-1:hover .color-overlay {
-  background: rgba(84, 104, 110, 0.8);
+  background: rgba(84, 104, 110, 0.9);
 }
 .card-1:hover .title-content {
   opacity: 0;
@@ -696,7 +692,7 @@ body .scroll .scroll-content {
   color: #9cc9e3;
 }
 .card-2:hover .color-overlay {
-  background: rgba(84, 104, 110, 0.8);
+  background: rgba(84, 104, 110, 0.9);
 }
 .card-2:hover .title-content {
   opacity: 0;
@@ -756,7 +752,7 @@ body .scroll .scroll-content {
   color: #9cc9e3;
 }
 .card-3:hover .color-overlay {
-  background: rgba(84, 104, 110, 0.8);
+  background: rgba(84, 104, 110, 0.9);
 }
 .card-3:hover .title-content {
   opacity: 0;
@@ -816,7 +812,7 @@ body .scroll .scroll-content {
   color: #9cc9e3;
 }
 .card-4:hover .color-overlay {
-  background: rgba(84, 104, 110, 0.8);
+  background: rgba(84, 104, 110, 0.9);
 }
 .card-4:hover .title-content {
   opacity: 0;
@@ -876,7 +872,7 @@ body .scroll .scroll-content {
   color: #9cc9e3;
 }
 .card-5:hover .color-overlay {
-  background: rgba(84, 104, 110, 0.8);
+  background: rgba(84, 104, 110, 0.9);
 }
 .card-5:hover .title-content {
   opacity: 0;
@@ -936,7 +932,7 @@ body .scroll .scroll-content {
   color: #9cc9e3;
 }
 .card-6:hover .color-overlay {
-  background: rgba(84, 104, 110, 0.8);
+  background: rgba(84, 104, 110, 0.9);
 }
 .card-6:hover .title-content {
   opacity: 0;
