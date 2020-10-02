@@ -151,21 +151,6 @@ body .scroll .scroll-content {
     visibility: hidden;
   }
 }
-@media (max-width: 768px) {
-  .loading-bar-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 15%;
-  }
-
-  .loading-bar {
-    width: 250px;
-  }
-
-  .loading-bar-name {
-    left: 60px;
-  }
-}
 .glitch {
   position: relative;
   font-size: 7.5rem;
